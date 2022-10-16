@@ -1,0 +1,155 @@
+//main: ../styles.less
+
+.ourshops {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.ourshops__block {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    position: relative;
+}
+
+.ourshops__item {
+
+    & img {
+        width: 100%;
+        height: 160px;
+        background: #777;
+        border-radius: 15px;
+    }
+}
+
+.ourshops__name {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: rgb(109,110,112);
+    white-space: pre-line;
+    margin-top: 15px;
+    line-height: 1.3;
+}
+
+.ourshops__link {
+    font-family: "Trebuchet", sans-serif;
+    font-size: 15px;
+    display: block;
+    color: rgb(109,110,112);
+    position: relative;
+    padding-left: 25px;
+
+    &:before {
+        content: "";
+        display: block;
+        background: url("../images/phone.png") center left no-repeat;
+        width: 20px;
+        height: 20px;
+        background-size: 18px;
+        position: absolute;
+        left: 0;
+        top: -1px;
+    }
+}
+
+@media(max-width:1200px) {
+    .ourshops__title {
+        font-size: 40px;
+    }
+}
+
+@media(max-width:990px) {
+    .ourshops__item img {
+        height: 130px;
+    }
+
+    .ourshops__title {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .ourshops__name {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+}
+
+@media(max-width:767px) {
+    .ourshops__title {
+        font-size:25px;
+    }
+}
+
+@media(max-width:700px) {
+    .ourshops__block {
+        grid-template-columns: repeat(3,1fr);
+        padding-top: 100px;
+    }
+
+    .ourshops__item {
+        &:first-child {
+            position: absolute;
+            top: -35px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .ourshops__title {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:600px) {
+    .ourshops__block {
+        grid-template-columns: repeat(2,1fr);
+        padding-top: 0;
+    }
+
+    .ourshops__item img {
+        height: 160px;
+    }
+
+    .ourshops__item:first-child {
+        position: static;
+    }
+
+    .ourshops__name {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:480px) {
+    .ourshops__name {
+        font-size: 12px;
+    }
+
+    .ourshops__item img {
+        height: 140px;
+    }
+
+    .ourshops__title {
+        font-size: 28px;
+    }
+}
+
+@media(max-width:360px) {
+    .ourshops__block {
+        grid-template-columns: .8fr;
+        justify-content: center;
+    }
+
+    .ourshops__item img {
+        height: 160px;
+    }
+
+    .ourshops__name {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
